@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <title> The Princess Bride Game-Along</title>
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+        <div class="toogleMenu">
+            <h1 id="toggle-bar">&#9776 </h1>
+        </div>
+        <ul class="mainMenu">
+            <li> <a id="homeNav" href="index.html">Home </a></li>
+            <li> <a id="florinNav" href="#florin">Florin </a></li>
+            <li> <a id="insanityNav" href="#insanity">Cliffs of Insanity </a></li>
+            <li> <a id="indigoNav" href="#indigo">Dual with Indigo </a></li>
+            <li> <a id="fezzikNav" href="#fezzik">Fight with Fezzik </a></li>
+            <li> <a id="witsNav" href="#wits">Battle of Wits</a></li>
+            <li> <a id="contact" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--SITE DESCRIPTION-->
+    <div>
+        <main class="main">
+            <header>
+                <div>
+                    <img id="mobile" src="img/theprincessbridelogo.jpg" alt="The Princess Bride Title" width=350px
+                        height=auto>
+                        <img id="large" src="img/princess_bride_logo2.png" alt="The Princess Bride Title" width=100% height=400px>
+                    <h1 class="header"> THE PRINCESS BRIDE GAME-ALONG</h1>
+                    <p> This game-along is a random Princess Bride knowlege test,
+                        a follow-the-path-game; and a way to see what wonderfully
+                        useless facts you possess about The Princess Bride and
+                        allows you to pick your own path in some instances.</p>
+                </div>
+            </header>
+            <!--BEGINNING MOVIE QUESTIONS-->
+            <section>
+                <div id="florin">
+                    <h2 class="header">We begin our journey in the country of Florin </h1>
+                        <ul>
+                            <li id="question"> Who attacked the ship Westley was sailing on? <br>
+                                <input class="box pirate" type="text" name="pirate" placeholder="Guess the Answer">
+                                <button class=btn id="pirate" type="button" onclick="pirateFunction()"> Check My Answer
+                                </button>
+
+                            </li> <br><br>
+                            <li id="question"> With Westley presummed dead who is Buttercup engaged to 5 years later?
+                                <br>
+                                <input class="box" type=text placeholder="Guess the Answer">
+                                <button class=btn id="humperdink" type="button" onclick="humperdinkFunction()"> Check My
+                                    Answer
+                                </button>
+                            </li> <br><br>
+                            <li id="question"> Who does Vizzini want the kingdom to assume took Buttercup? <br>
+                                <input class="box" type=text placeholder="Guess the Answer">
+                                <button class=btn id="guilder" type="button" onclick="guilderFunction()"> Check My
+                                    Answer
+                                </button>
+                            </li> <br><br>
+                            <li id="question"> Once aboard the ship Vizzini becomes irritated with Indigo and Fezzik...
+                                <br> <textarea id="contact_area" class="box"> </textarea> <br>
+                                <button class="btn" type="button" id="rhyme" onclick="rhymeFunction()"> Create a rhyme to help pass
+                                    the
+                                    time.</button>
+                            </li> <br><br>
+                            <li id="question"> On this journey with your captors, a ship is spotted following you what
+                                do
+                                you do...? <br>
+                                <button class="btn" type="button" id="eel" onclick="eelFunction()"> Jump into
+                                    eel-infested waters </button>
+                                <button class="btn" type="button" id="sit-and-wait" onclick="sitFunction()"> Sit still
+                                    and wait for your rescuer</button>
+                                <button class="btn" type="button" id="fight" onclick="fightFunction()"> Attempt to fight
+                                    all 3 (one of which is a giant)
+                                </button>
+                            </li><br>
+                        </ul>
+                        <hr id="insanity">
+                </div>
+            </section>
+            <section>
+                <!--CLIFFS OF INSANITY-->
+                <div class="cliff">
+                   
+                    <h1 class="header">THE CLIFFS OF INSANITY</h1>
+                    <img src="img/cliffofinsanity.jpg" alt="cliff of insanity" id="mobile" width=350px height=auto>
+                    <h2 class="intro" id="cliff2"> Shall we climb?</h2>
+                    <p class="intro" id="cliff2">Once you reach the top, the rope is cut to stop the follower, who didn't fall.</p>
+                    <p class="intro" id="cliff2">Let's wait for him to climb to the top.... </p><br>
+                </div>
+                <img id="hide" src="img/coi_looking_down.jpg" width=350px height=auto>
+            </section> <br>
+            <section id="indigo">
+                <!--DUAL WITH INDIGO-->
+                <div>
+                    <h1 class="header">INDIGO</h1>
+                    <p>Do you by chance have 6 fingers on your left hand?</p>
+                    <img src="img/indigo_fence.jpg" alt="Indigo Preparing to Fight" width=350px height=auto>
+                    <p> Hello, My name is Indigo Montoya. You killed my father, prepare to die.</p>
+                </div>
+                <button class="btn" type="button" onclick="startSword()">START</button>
+                <br> <br>
+                <canvas id="canvas" width=350 height=270></canvas>
+                <br>
+                <div id="move-btn">
+                    <button id="control" class="btn" onmousedown="moveup()" onmouseup="clearmove()"
+                        ontouchstart="moveup()">UP</button><br>
+                    <button id="control" class="btn" onmousedown="moveleft()" onmouseup="clearmove()"
+                        ontouchstart="moveleft()">LEFT</button>
+                    <button id="control" class="btn" onmousedown="moveright()" onmouseup="clearmove()"
+                        ontouchstart="moveright()">RIGHT</button><br>
+                    <button id="control" class="btn" onmousedown="movedown()" onmouseup="clearmove()"
+                        ontouchstart="movedown()">DOWN</button>
+                </div> 
+            </section> <br>
+            <section>
+                <!--FIGHT WITH FEZZIK-->
+                <div>
+                    <h1 class="header" id="fezzik">FEZZIK</h1>
+                    <h2> FINISH HIM, FINISH HIM YOUR WAY!</h2>
+                    <img src="img/fezzik_rock.jpg" alt="Fezzik throwing rock" width=350px height=auto>
+                    <h2>Hand-to-Hand Combat with a Giant..</h2>
+                    <div id="box">
+                        <div id="field"></div>
+                        <div id="lost" style="display: none;">
+                            <button class="btn" id="new-game-button" type="button" onclick="reload()">Start
+                                Again</button>
+                        </div>
+                    </div>
+                </div>
+            </section> <br>
+            <section>
+                <!--BATTLE OF WITS-->
+                <div>
+                    <h1 class="header" id="wits">BATTLE OF WITS</h1>
+                    <h2>INCONCIEVABLE</h2>
+                    <p>Have you built up your immunity?</p>
+                    <p>Which wine will you drink?</p>
+                    <img id="chalice" src="img/chalice2.png"
+                        onclick="alert('You chose wrong, seeing as I switched the glasses while your back was turned.')"
+                        alt="wine chalice">
+                    <img id="chalice" src="img/chalice2.png"
+                        onclick="alert('You chose wrong, seeing as I switched the glasses while your back was turned.')"
+                        alt="wine chalice">
+                </div>
+                <div>
+                    <hr>
+                    <h1 class="header">TO BE CONTINUED... </h1>
+                </div>
+            </section> <br>
+        </main>
+        <footer> <hr>
+            <div class="flex-container">
+                <div class="column small-12 medium-6 large-3">
+                    <h3>Github</h3>
+                    <p><a href="https://github.com/SSDobbs/" target="_blank"> <img class="fab fa-github"
+                        src="img/github-brands.svg" width="20px" height=auto></a> </p>
+                </div>
+                <div class="column small-12 medium-6 large-3">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/shyela-dobbs/" target="_blank"> <img class="fab fa-linkedin"
+                        src="img/linkedin-brands.svg" width="20px" height=auto></a> </p>
+                </div>
+                <div class="column small-12 medium-6 large-3">
+                    <h3>FOOT THREE</h3>
+                    <h3>information</h3>
+                </div>
+                <div class="column small-12 medium-6 large-3">
+                    <h3>FOOT FOUR</h3>
+                    <h3>&copy; 2021 &bull; all rights reserved.</h3>
+                </div>
+            </div>
+        </footer>   
+    <script src="script.js"></script>
+    <script src="minigamescript.js"></script>
+</body>
+
+</html>

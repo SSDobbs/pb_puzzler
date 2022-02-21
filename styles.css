@@ -1,0 +1,287 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f5dcac;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    color: #4f3e31;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+hr {
+    color: #4f3e31;
+}
+
+/*top button*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #4f3e31;
+    color: bisque;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/*navigation menu*/
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    color: bisque;
+    text-align: center;
+    padding: 7px;
+    background-color: #4f3e31;
+    text-decoration: none;
+    display: block;
+}
+
+.mainMenu {
+    display: none;
+}
+
+.mainMenu.hamburger {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    font-family: 'Griffy', cursive;
+    font-size: 45px;
+    color: #32c0e3;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border-radius: 20%;
+}
+
+#large {
+    display: none;
+}
+
+.btn {
+    background-color: #4f3e31;
+    color: bisque;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 12px;
+    justify-items: center;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #32c0e3;
+}
+
+.intro,
+.contact,
+p {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#question {
+    font-size: 26px;
+    padding-right: 45px;
+}
+
+.box {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+    border-color: #4f3e31;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+#contact_area {
+    height: 200px;
+}
+
+#chalice {
+    height: 350px;
+    width: auto;
+}
+
+/*fezzik minesweeper game*/
+#field table {
+    border-collapse: collapse;
+    font-size: 150%;
+    font-family: san-serif;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid #4f3e31;
+    border-radius: 10px;
+}
+
+#field table td {
+    background-color: #eda871;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    border: 1px solid #4f3e31;
+
+}
+
+canvas {
+    border: 1px solid #4f3e31;
+    background-color: #eda871;
+    border-radius: 10px;
+}
+
+/*Footer*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/*media query medium */
+@media only screen and (min-width: 628px) {
+
+
+    #cliff2 {
+        color: #4f3e31;
+    }
+    .intro {
+        color: bisque;
+        outline-color: #4f3e31;
+    }
+
+    #contact_area {
+        width: 500px;
+        height: 250px;
+    }
+
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .medium-6 {
+        width: 50%;
+    }
+
+    .medium-4 {
+        width: 33.33333%;
+    }
+}
+
+/* end media query med screen */
+
+
+/*media query large */
+@media only screen and (min-width: 900px) {
+
+    .cliff {
+        background-image: url(img/cliffofinsanity.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: auto;
+        margin-bottom: 15px;
+    }
+    #cliff2 {
+        color: bisque;
+    }
+
+    #hide,
+    #toggle-bar {
+        display: none;
+    }
+
+    #large {
+        display: initial;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    .mainMenu {
+        display: initial;
+    }
+
+    nav {
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        display: block;
+        float: left;
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+
+    canvas {
+        width: 500px;
+        height: 400px;
+        align-content: center;
+    }
+
+    .contact-form {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+    nav a:hover,
+    #myBtn:hover,
+    .btn:hover {
+        background-color: #32c0e3;
+    }
+
+    .large-3 {
+        width: 25%;
+    }
+
+}
+
+/*end media query large screen */

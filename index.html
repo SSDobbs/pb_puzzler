@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title> The Princess Bride Game-Along</title>
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">   
+</head>
+
+<body>
+    <img id="mobile" src="img/theprincessbridelogo.jpg" alt="The Princess Bride Title" width=350px height=auto>
+    <img id="large" src="img/princess_bride_logo2.png" alt="The Princess Bride Title" width=100% height=400px>
+    <h1 class="header" id="hide"> THE PRINCESS BRIDE GAME-ALONG</h1>
+
+    <form>
+        <input class="box" type="text" id="name" name="name" placeholder="Name" required>
+    </form>
+    <br>
+    <button class="btn" id="btn" type="submit" value="Submit" onclick="welcomeFunction()"> Submit </button>
+
+    <script>
+        function welcomeFunction() {
+            event.preventDefault();
+            let y = document.getElementById("name").value;
+            alert('Welcome ' + y);
+            console.log(y);
+            window.open("princess_bride.html", "_self");
+        }
+    </script>
+
+</body>
+
+</html>

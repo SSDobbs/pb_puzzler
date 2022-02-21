@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <title> The Princess Bride Game-Along</title>
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul class="mainMenu">
+            <li> <a id="homeNav" href="princess_bride.html">Home </a></li>
+            <li> <a id="contact" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1 class="header">We love to hear from you!</h1>
+        <h2 class="contact">Please fill out the form below with any comments, questions, ideas...you name it. </h2>
+        <form class=contact-form>
+            <input class ="box" id="contact_name" type="text" name="name" placeholder="Name" required></label>
+            <input class ="box" id="contact_email" type="email" name="email" placeholder="EMAIL" required></label> 
+            <textarea class ="box" id="contact_area"></textarea></label> <br>
+            <input type="submit"  value="Send My Comment!" class="btn" id="contact_submit" onclick="saveInfo()">
+        </form>
+    </section>
+    <footer>
+        <p id=footer>Check out other projects on GitHub</p>
+        <a href ="https://github.com/SSDobbs/" target = "_blank"> <img class="fab fa-github" src="img/github-brands.svg" width="20px" height=auto></a>            
+    </footer>
+
+    <script>
+        function saveInfo() {
+        let n = document.getElementById("contact_name").value; 
+        let e = document.getElementById("contact_email").value;
+        let c = document.getElementById("contact_area").value;
+        console.log (n,e,c);
+        sessionStorage.setItem('Name', n);
+        sessionStorage.setItem('Email', e);
+        sessionStorage.setItem('Comment', c);
+        alert (n + " THANK YOU FOR YOUR INPUT! We may contact you at " + e + " for additional input. Have a great day!" );
+        window.open("/princess_bride.html", "_self");    
+    }
+    </script>
+</body>
+
+</html>
